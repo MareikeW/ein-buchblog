@@ -4,14 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,700&display=swap" 
+    rel="stylesheet">
+    <link href="../stylesheet.css" rel="stylesheet" type="text/css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <h1>Hallo Bücherwürmer!</h1>
+        <div class="header-container">
+            <div class="site-title">
+                <h1>Der Bücherwurmblog</h1>
+            </div>
+            <nav class="nav-container">
+                <ul class="nav-list">
+                    <li class="nav-list-item"><a href="#">Startseite</a></li>
+                    <li class="nav-list-item"><a href="#">Beiträge</a></li>
+                    <li class="nav-list-item"><a href="#">Über</a></li>
+                    <li class="nav-list-item"><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <div class="content-container">
+    <main role="main">
+        <article class="article">
+            <h2 class="article-title">Northanger Abbey</h2>
+            <img src="..\Entrance_to_Pump_House.jpg" alt="Eingang zum berühmten Pump Room in Bath, England."
+            class="article-image">
+            <p class="article-info">13.03.2020 | <a href="#" class="to-comments-link">3 Kommentare</a></p>
+            <p>Mein Lieblingsroman von Jane Austen ist <strong>Northanger Abbey</strong>.</p>
+            <div class="continue-btn-flex">
+            <a href="#" class="continue-btn">weiterlesen</a>
+            </div>
+        </article>
+        <article class="article">
+            <h2 class="article-title">Diesseits vom Paradies</h2>
+            <img src="../Fitzgerald_Pic.jpg" alt="F. Scott Fitzgerald beim Lesen eines Buches"
+            class="article-image">
+            <p class="article-info">12.03.2020 | <a href="#" class="to-comments-link">3 Kommentare</a></p>
+            <p>Mein Lieblingsroman von F. Scott Fitzgerald ist <strong>Diesseits vom Paradies</strong>.</p>
+            <div class="continue-btn-flex">
+            <a href="#" class="continue-btn">weiterlesen</a>
+            </div>
+        </article>
+    </main>
+
+    <aside>
+
+    </aside>
+    </div>
+    
+    <footer>
+        <p>This is the footer.</p>
+    </footer>
 </body>
 
 </html>
