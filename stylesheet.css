@@ -9,10 +9,10 @@ body {
     font-size: 1.125rem;
 }
 
-img {
+/* img {
     max-width: 100%;
     display: block;
-}
+}  */
 
 /*=====================
     General Typography
@@ -39,6 +39,18 @@ p {
     line-height: 1.3;
     letter-spacing: 0.5px;
     font-size: 1em;
+}
+
+footer :first-child {
+    font-weight: 700;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+footer :last-child {
+    letter-spacing: 0;
+    margin-top: 5px;
+    font-size: 0.8em;
 }
 
 /*=====================
@@ -102,6 +114,11 @@ footer {
     border-bottom: solid 1px;
 }
 
+.current {
+    font-weight: 700;
+    color: cornsilk;
+}
+
 /*=====================
       Artikel
 =====================*/
@@ -121,6 +138,7 @@ footer {
 
 }
 
+/*
 .article-image {
     max-height: 350px;
     width: 100%;
@@ -128,7 +146,7 @@ footer {
     margin: 10px auto;
     object-position: center;
     order: -2;
-}
+} */
 
 .article-info {
     font-size: 0.8rem;
@@ -144,6 +162,15 @@ footer {
 .to-comments-link:focus {
     border-bottom: solid 1px;
     color: blue;
+}
+
+
+/* Problem mit Bild, wenn Screen größer wird */
+.image-container {
+    background-image: url("../Entrance_to_Pump_House.jpg");
+    background-size: 100%;
+    width: 100%;
+    height: 300px;
 }
 
 .continue-btn-flex {
@@ -170,7 +197,7 @@ footer {
 
 
 /*=====================
-      Media Query
+      Media Queries
 =====================*/
 @media (min-width: 600px) {
     .header-container {
@@ -179,10 +206,17 @@ footer {
     .nav-list {
         display: flex;
         justify-content: space-around;
-        background-color: blue;
-        margin: 0 auto;
+
+        margin: 10px auto;
         width: 100%;
     }
+
+    .nav-list .nav-list-item:hover,
+    .nav-list .nav-list-item:focus {
+    color: white;
+    border-bottom: solid 1px;
+    }
+
 }
 
 @media (min-width: 900px) {
