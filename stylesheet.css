@@ -9,10 +9,10 @@ body {
     font-size: 1.125rem;
 }
 
-/* img {
+img {
     max-width: 100%;
     display: block;
-}  */
+}
 
 /*=====================
     General Typography
@@ -63,6 +63,9 @@ footer :last-child {
     align-items: center;
     padding: 5px;
     background: #cccccc;
+    border-bottom: 1px solid gray;
+    width: 96%;
+    margin: 0 auto;
 }
 
 .site-main-title {
@@ -80,7 +83,6 @@ footer :last-child {
 .content-container {
     width: 90%;
     margin: 0 auto;
-    border-top: 1px solid gray;
 }
 
 footer {
@@ -126,7 +128,7 @@ footer {
 .article {
     padding: 10px;
     margin: 30px auto;
-    width: 100%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     border-bottom: solid;
@@ -137,16 +139,6 @@ footer {
     margin-bottom: 20px;
 
 }
-
-/*
-.article-image {
-    max-height: 350px;
-    width: 100%;
-    object-fit: cover;
-    margin: 10px auto;
-    object-position: center;
-    order: -2;
-} */
 
 .article-info {
     font-size: 0.8rem;
@@ -164,13 +156,9 @@ footer {
     color: blue;
 }
 
-
-/* Problem mit Bild, wenn Screen größer wird */
-.image-container {
-    background-image: url("../Entrance_to_Pump_House.jpg");
-    background-size: 100%;
-    width: 100%;
-    height: 300px;
+.article-image {
+    max-width: 400px;
+    margin: 15px auto;
 }
 
 .continue-btn-flex {
@@ -217,29 +205,38 @@ footer {
     border-bottom: solid 1px;
     }
 
+    .article-image {
+
+    }
+
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1300px) {
     .header-container {
         flex-direction: row;
         padding: 10px;
-        background-color: yellow;
         justify-content: space-around;
         align-items: center;
         height: 100px;
+        background: pink;
     }
     .header-title {
         margin-right: 30px;
     }
+    
+    .site-subtitle {
+        padding-bottom: 30px;
+    }
     .nav-list {
         display: flex;
         justify-content: space-around;
-        background-color: blue;
         margin: 0 auto;
         width: 100%;
     }
     .nav-list-item {
-        list-style: none;
-        background-color: green;  
+        list-style: none; 
+        margin-right: 10px;
+        border: 1px red solid;
+        border-radius: 20px;
     }
 }
