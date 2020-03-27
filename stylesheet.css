@@ -7,6 +7,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.125rem;
+    color: #50666b;
 }
 
 img {
@@ -20,6 +21,7 @@ img {
 h1,
 h2 {
     font-family: 'Playfair Display', serif;
+    color: #192965;
 }
 
 h1 {
@@ -32,7 +34,6 @@ h2 {
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 p {
@@ -62,21 +63,21 @@ footer :last-child {
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    background: #cccccc;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #192965;
     width: 96%;
     margin: 0 auto;
 }
 
 .site-main-title {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
 }
 
 .site-subtitle {
     text-align: center;
-    color: blueviolet;
+    color: #7189bf;
     text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
     /* main content */
@@ -90,9 +91,10 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: yellow;
+    background: #bbcfff;
     margin: 0;
     padding: 30px 0;
+    color: #192965;
 }
 
 /*=====================
@@ -101,24 +103,23 @@ footer {
 
 .nav-list {
     margin: 20px 0;
+    list-style: none;
 }
 
 .nav-list-item {
-    list-style: none;
     text-align: center;
     padding: 0.5em 1.6em;
     text-transform: uppercase;
+    color: #50666b;
 }
 
 .nav-list .nav-list-item:hover,
-.nav-list .nav-list-item:focus {
-    color: blue;
-    border-bottom: solid 1px;
+.nav-list a:focus {
+    color: #faafff;
 }
 
 .current {
     font-weight: 700;
-    color: cornsilk;
 }
 
 /*=====================
@@ -137,13 +138,11 @@ footer {
 .article-title {
     text-align: left;
     margin-bottom: 20px;
-
 }
 
 .article-info {
     font-size: 0.8rem;
     padding: 5px 0;
-    order: -1;
 }
 
 .to-comments-link {
@@ -153,7 +152,8 @@ footer {
 .to-comments-link:hover,
 .to-comments-link:focus {
     border-bottom: solid 1px;
-    color: blue;
+    color:#192965;
+
 }
 
 .article-image {
@@ -179,10 +179,20 @@ footer {
 
 .continue-btn:hover,
 .continue-btn:focus {
-    background: blue;
+    background: #faafff;
     color: white;
 }
 
+/*=====================
+      Widgets
+=====================*/
+.widget {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+}
 
 /*=====================
       Media Queries
@@ -194,34 +204,37 @@ footer {
     .nav-list {
         display: flex;
         justify-content: space-around;
-
         margin: 10px auto;
         width: 100%;
     }
 
     .nav-list .nav-list-item:hover,
     .nav-list .nav-list-item:focus {
-    color: white;
-    border-bottom: solid 1px;
+        color: #faafff;
+        border-bottom: 1px solid #faafff;
     }
-
-    .article-image {
-
-    }
-
 }
 
 @media (min-width: 1300px) {
+    .content-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
     .header-container {
         flex-direction: row;
         padding: 10px;
         justify-content: space-around;
         align-items: center;
         height: 100px;
-        background: pink;
     }
     .header-title {
         margin-right: 30px;
+    }
+
+    .site-main-title {
+        margin-top: 40px;
     }
     
     .site-subtitle {
@@ -236,7 +249,7 @@ footer {
     .nav-list-item {
         list-style: none; 
         margin-right: 10px;
-        border: 1px red solid;
+        border: 1px darkmagenta solid;
         border-radius: 20px;
     }
 }
