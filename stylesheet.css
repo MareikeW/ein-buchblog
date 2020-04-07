@@ -43,7 +43,7 @@ p {
 }
 
 .main-quote {
-    margin: 40px auto 0px auto;
+    margin: 3em auto 0 auto;
     width: 80%;
     background: rgba(245,245,245,.9);
     padding: 2em 3em;
@@ -141,7 +141,7 @@ footer {
 }
 
 .current {
-    font-weight: 700;
+    font-weight: 700; 
 }
 
 /*=====================
@@ -252,7 +252,7 @@ footer {
     .nav-list {
         display: flex;
         justify-content: space-around;
-        margin: 10px auto;
+        margin: 1em auto 1.5em;
         width: 100%;
     }
 
@@ -261,6 +261,10 @@ footer {
         color: #faafff;
         border-bottom: 1px solid #faafff;
     }
+
+    .current {
+        border-bottom: 1px solid #50666b;
+    } 
 
     .main-quote {
         width: 450px;
@@ -280,31 +284,26 @@ footer {
     =====================*/
     .container-about {
         display: grid;
-        background-color: #7189bf;
-        grid-template-rows: 2fr 8fr;
-        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 2fr 6fr;
+        grid-template-columns: 1fr 0.5fr 4fr;
         grid-template-areas: 
-        "image title"
-        "image text";
+        "image . title"
+        "image . text";
     }
 
     .about-img {
         margin-right: 1em;
         grid-area: image;
-        background-color: bisque;
     }
     
     .about-text {
         margin: auto 0;
         grid-area: text;
-        background-color: #faafff;
     }
 
     .about-title {
-        background-color: aqua;
         grid-area: title;
-        align-self: center;
-        
+        align-self: center;  
     }
 }
 
@@ -346,6 +345,17 @@ footer {
         border-radius: 20px;
     }
 
+    .current {
+        border: 1.5px solid #50666b;
+    }
+
+    .widget-container {
+        background: rgba(245,245,245,.9);
+        padding: 0 1.5em 1.5em 1.5em;
+        height: 20%;
+        margin-top: 3em;
+    }
+
     .widget {
         margin-top: 50px;
     }
@@ -354,9 +364,19 @@ footer {
         margin-bottom: 0;
     }
 
-
     /*=====================
         Über
     =====================*/
-    
+    .container-about {
+        width: 80%;
+        
+    }
+
+    /* ansonsten würde unter dem Footer noch white space sein */
+    .footer-ueber {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
 }
