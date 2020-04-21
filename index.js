@@ -1,35 +1,31 @@
 
-// Gibt irgendein Zitat aus der Liste aus
-var quotes = [
+// Liste mit allen Zitaten
+const quotes = [
     {quote: `Von allen Welten, die der Mensch erschaffen hat, ist die der Bücher die Gewaltigste.`, author: "Heinrich Heine"},
     {quote: `Ein klassisches Werk ist ein Buch, das die Menschen loben, aber nie lesen`, author: "Ernest Hemingway"},
     {quote: `Gewisse Bücher scheinen geschrieben zu sein, nicht damit man daraus lerne, sondern damit man wisse, dass der Verfasser etwas gewusst hat.`, author: "Johann Wolfgang von Goethe"},
     {quote: `So etwas wie moralische oder unmoralische Bücher gibt es nicht. Bücher sind gut oder schlecht geschrieben. Weiter nichts.`, author: "Oscar Wilde"}
 ]
 
-class BookQuotes {
-    constructor(){
-        this.pickQuoteFromRandomQuote = pickedQuoteAndAuthor;
-        this.pickedQuote = pickedQuote;
-    }
-
-    
-
-randomQuote(quotes) {
-    var pickedQuoteAndAuthor = quotes[Math.floor(Math.random()*quotes.length)];
-    return pickedQuoteAndAuthor;   
+// Wählt ein Key/Value-Paar aus der Liste aus
+function getRandomQuote(quotes){
+    return quotes[Math.floor(Math.random()*quotes.length)]; 
 }
 
+// Ausgewähltes Key/Value-Paar wird in neuer Variable gespeichert
+const subText = getRandomQuote(quotes);
 
-pickQuoteFromRandomQuote(pickedQuoteAndAuthor) {
+// Verlinkung zu HTML Elementen für Zitat und Autor
+var changeQuote = document.getElementById("quote");
+var changeAuthor = document.getElementById("author");
 
-}
-//console.log(randomQuote(quotes));
+// Key/Value-Paar wird aufgeteilt, in String umgewandelt und getrennt gespeichert
+const authorText = JSON.stringify(subText.author);
+const quoteText = JSON.stringify(subText.quote);
 
-//document.getElementById("quote").innerHTML = randomQuote(quotes);
+// Die Anführungszeichen am Anfang und Ende des Autors werden entfernt
+// & ins HTML-Dokument übertragen
+changeAuthor.innerHTML = authorText.slice(1,-1);
 
-
-}
-
-randomQuote(quotes);
-
+// Fügt das Zitat ins HTML ein
+changeQuote.innerHTML = quoteText;
