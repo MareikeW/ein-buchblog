@@ -34,6 +34,7 @@ h2 {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 p {
@@ -211,6 +212,11 @@ footer {
     color: white;
 }
 
+.to-external-website:hover,
+.to-external-website:focus {
+    border-bottom: solid 2px;
+}
+
 /*=====================
       Widgets
 =====================*/
@@ -347,6 +353,10 @@ footer {
 
     .current {
         border: 1.5px solid #50666b;
+    }
+
+    .article:last-child {
+        border-bottom: none;
     }
 
     .widget-container {
