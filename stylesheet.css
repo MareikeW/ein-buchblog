@@ -110,6 +110,23 @@ footer :last-child {
     margin: 0 auto;
 }
 
+/* Kommentarformular */
+.comments-container {
+
+}
+
+.comment-submit-btn {
+    padding: 1em 2em;
+    width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 0;
+    letter-spacing: 1px;
+    margin: 20px 0;
+}
+
+/* Footer*/
 footer {
     display: flex;
     flex-direction: column;
