@@ -29,3 +29,24 @@ changeAuthor.innerHTML = authorText.slice(1,-1);
 
 // Fügt das Zitat ins HTML ein
 changeQuote.innerHTML = quoteText;
+
+
+
+
+
+// Kommentare erstellen
+// Hier brauche ich noch eine Datenbank!
+const comment = document.querySelector(".comment-submit-btn");
+comment.addEventListener('click', event => {
+    // speichert eingegebene Daten in Variablen
+    const commentTextarea =  document.getElementById("ftextarea-comment").value;
+    console.log(commentTextarea);
+    const commentAuthor = document.getElementById("fname-comment").value;
+    console.log(commentAuthor);
+  
+    // Verhindert, dass die Seite jedesmal nach "Submit" neu geladen wird
+    this.$form.addEventListener('submit', event => {
+      event.preventDefault();
+    });
+});
+
