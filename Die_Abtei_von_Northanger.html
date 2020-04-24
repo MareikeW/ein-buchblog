@@ -67,14 +67,39 @@
 
             <form class="comments-container" action="#" method="POST">
                 <h4>Ich freu mich über deinen Kommentar</h4>
-                <input type="text" id="ftextfield-comment" placeholder="Mein Kommentar..." required>
-                <label>Name:* <input type="text" id="fname-comment" placeholder="Name" required></label>
-                <label>E-Mail:<input type="email" id="femail-comment" placeholder="E-Mail"></label>
-                <input type="checkbox" id="fcheck-comment" required><label for="fcheck-comment">Mit der Nutzung dieses Formulars
-                    erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch
-                    diese Webseite einverstanden.*
-                </label>
-                <button type="submit" class="comment-submit-btn" id="comment-submit-btn">Kommentar abschicken</button>
+                <div class="row">
+                    <div class="col-20">
+                        <label for="ftextarea-comment">Kommentar*</label>
+                    </div>
+                    <div class="col-70">
+                        <textarea type="text" id="ftextarea-comment" placeholder="Mein Kommentar..." required></textarea>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col-20">
+                        <label for="fname-comment">Name*</label>
+                    </div>
+                    <div class="col-70">
+                        <input type="text" id="fname-comment" placeholder="Name" required>
+                    </div>
+                </div>  
+                
+                
+                <div class="row">
+                    <div class="col-5">
+                        <input type="checkbox" id="fcheck-comment" required>
+                    </div>
+                    <div class="col-90">
+                        <label for="fcheck-comment">Mit der Nutzung dieses Formulars
+                        erklärst du dich mit der Speicherung und Verarbeitung deiner Daten durch
+                        diese Webseite einverstanden.*
+                        </label>
+                    </div>
+                </div>
+
+                <div class="comment-submit-btn-container">
+                    <button type="submit" class="comment-submit-btn" id="comment-submit-btn">Kommentar abschicken</button>
+                </div>
             </form>
         </article>
     </main>
