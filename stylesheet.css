@@ -19,7 +19,8 @@ img {
     General Typography
 =====================*/
 h1,
-h2 {
+h2,
+h3 {
     font-family: 'Playfair Display', serif;
     color: #192965;
 }
@@ -30,6 +31,10 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 a {
@@ -63,6 +68,11 @@ p {
     font-size: 0.8em;
     display: block;
     margin-top: 1em;
+}
+
+.category-item:hover,
+.category-item:focus {
+    font-weight: 700;
 }
 
 footer :first-child {
@@ -251,7 +261,6 @@ footer {
 .to-comments-link:focus {
     border-bottom: solid 1px;
     color:#192965;
-
 }
 
 .article-image {
@@ -265,7 +274,8 @@ footer {
     height: 500px;
 }
 
-.continue-btn-flex {
+.continue-btn-flex, 
+.to-further-posts-btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -273,7 +283,8 @@ footer {
     margin-bottom: 10px;
 }
 
-.continue-btn {
+.continue-btn, 
+.to-further-posts-btn {
     background: pink;
     padding: 0.5em 1.5em;
     color: #000;
@@ -281,10 +292,22 @@ footer {
     font-weight: bold;
 }
 
+.to-further-posts-btn {
+    margin: 50px auto;
+    width: 50%;
+    background: #192965;
+    color: white;
+}
+
 .continue-btn:hover,
 .continue-btn:focus {
     background: #faafff;
     color: white;
+}
+
+.to-further-posts-btn:hover,
+.to-further-posts-btn:focus {
+    background: #7189bf;;
 }
 
 .to-external-website:hover,
@@ -295,11 +318,11 @@ footer {
 /*=====================
       Widgets
 =====================*/
-.widget {
+.widget-container {
     display: flex;
     flex-direction: column;
     margin: 20px auto;
-    max-width: 400px;
+    max-width: 600px;
     text-align: center;
 }
 
@@ -310,6 +333,25 @@ footer {
     margin: 50px auto;
 }
 
+.widget-category-container {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    padding: 1em 1.5em;
+}
+
+.category-list {
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    line-height: 2rem;
+}
 /*=====================
       Über
 =====================*/
@@ -389,12 +431,6 @@ footer {
 }
 
 @media (min-width: 1300px) {
-    .content-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
     .header-container {
         flex-direction: row;
         padding: 10px;
@@ -430,18 +466,31 @@ footer {
         border: 1.5px solid #50666b;
     }
 
+    .content-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-container {
+        width: 65%;
+    }
+
     .article:last-child {
         border-bottom: none;
     }
 
     .widget-container {
+        width: 25%;
+    }
+
+    .widget-about-container {
         background: rgba(245,245,245,.9);
         padding: 0 1.5em 1.5em 1.5em;
-        height: 20%;
         margin-top: 3em;
     }
 
-    .widget {
+    .widget-text {
         margin-top: 50px;
     }
 
