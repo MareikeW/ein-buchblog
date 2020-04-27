@@ -1,3 +1,4 @@
+/* Zitate für die Zitatwolke werden per Zufallsprinzip ausgewählt */
 
 // Liste mit allen Zitaten
 const quotes = [
@@ -29,6 +30,4 @@ changeAuthor.innerHTML = authorText.slice(1,-1);
 
 // Fügt das Zitat ins HTML ein
 changeQuote.innerHTML = quoteText;
-
-
 
