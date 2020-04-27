@@ -75,6 +75,15 @@ p {
     font-weight: 700;
 }
 
+.current-category {
+    font-weight: 700;
+}
+
+.categorie-page-title {
+    text-align: center;
+    margin-top: 1em;
+}
+
 footer :first-child {
     font-weight: 700;
     font-size: 1.2em;
