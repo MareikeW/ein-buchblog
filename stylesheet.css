@@ -279,6 +279,11 @@ footer {
     margin: 15px auto;
 }
 
+#recommended-post {
+    height: 200px;
+    border: solid 1px;
+}
+
 .waugh-img {
     height: 500px;
 }
