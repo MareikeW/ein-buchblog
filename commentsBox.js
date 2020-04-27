@@ -2,9 +2,8 @@
 
 class CommentsBox {
     constructor() {
+        // Array, in dem alle Kommentare gespeichert werden
         this.commentsArray = JSON.parse(localStorage.getItem("commentsContainer")) || [];
-        this.name = "";
-        this.text = "";
 
         this.$form = document.querySelector("#comments-form");
         this.$authorName = document.querySelector("#fname-comment");
@@ -15,35 +14,39 @@ class CommentsBox {
         this.addEventListeners();
     }
 
+    // wenn auf den Submit-Button geklickt wird, werden die Eingaben in den Variablen gespeichert
     addEventListeners() {
         this.$form.addEventListener('submit', event => {
-            // stoppt, dass nach "submit" die Seite nicht neu lädt
+            // macht, dass nach "submit" die Seite nicht neu lädt
             event.preventDefault();
             
             var name = this.$authorName.value;
             var text = this.$commentText.value;
-            
+            // ruft Funktion, um neuen Kommentar dem Array hinzuzufügen
             this.addComment({ name, text });
-            
         });
     }
 
+    // fügt Author und Kommentartext ans Ende des bisherigen Arrays
     addComment({ name, text }) {
         const newComment = {
             name,
             text
         };
         this.commentsArray = [...this.commentsArray, newComment];
+        // speichert Kommentar und zeigt ihn unter der Kommentarbox an
         this.saveComments();
         this.displayCommentsArray();
     }
 
     saveComments() {
+        // neuer Kommentar wird lokal gespeichert
        localStorage.setItem('comments', JSON.stringify(this.commentsArray));
     }
 
+    // zeigt neuen Kommentar an
     displayCommentsArray() {
-        //const hasComments = this.commentsArray.length > 0;
+        // HTML Layout für neuen Kommentar/ Style in CSS
         this.$comments.innerHTML = this.commentsArray
             .map(
                 comment => `
@@ -52,7 +55,7 @@ class CommentsBox {
                 <p>${comment.text}</p>
                 </div>
                 `
-            ).join("");
+            ).join(""); // ohne "join" würde man die Kommas nach jedem Objekt sehen
        
     }
 
