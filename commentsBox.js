@@ -9,6 +9,7 @@ class CommentsBox {
         this.$authorName = document.querySelector("#fname-comment");
         this.$commentText = document.querySelector("#ftextarea-comment");
         this.$comments = document.querySelector("#comments");
+        this.$commentCount = document.querySelector(".commentCount");
 
         this.saveComments();
         this.addEventListeners();
@@ -56,7 +57,13 @@ class CommentsBox {
                 </div>
                 `
             ).join(""); // ohne "join" würde man die Kommas nach jedem Objekt sehen
-       
+
+        // zeigt über dem Beitrag an, wie viele Kommentare dazu existieren
+        this.$commentCount.innerHTML = this.commentsArray.length;
+
+        // setzt Kommentarformular zurück
+        this.$authorName.value = "";
+        this.$commentText.value ="";
     }
 
 }
